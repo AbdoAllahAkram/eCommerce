@@ -5,10 +5,23 @@ body {
     font-family: 'Saira Semi Condensed', sans-serif;
 }
 
-
+.red-star {
+    position: absolute;
+    font-size: 30px;
+    color: #ce0f0f;
+    top: 7px;
+    right: 25px;
+}
 
 /* End General Rules*/
 
+/* Start Bootstrap Edit */
+
+.form-control {
+    position: relative;
+}
+
+/* End Bootstrap Edit */
 
 /* Start Login Form */
 
@@ -56,13 +69,46 @@ body {
 
 /* End Navbar */
 
-/* Start Edit Page */
+/* Start member manage page */
 
-.edit-page h1 {
+.edit-page h1,
+.update-page h1,
+.manage-page h1{
     font-size: 55px;
     font-weight: 600;
     margin: 0 0 40px;
     color: #5b5b5b;
 }
 
-/* End Edit Page */
+.show-pass {
+    position: absolute;
+    top: 9px;
+    right: -20px;
+}
+
+.main-table {
+    -webkit-box-shadow: 0 3px 15px #CCc;
+    -moz-box-shadow: 0 3px 15px #CCc;
+    -o-box-shadow: 0 3px 15px #CCc;
+    box-shadow: 0 3px 15px #CCc;
+}
+
+.main-table td {
+    background-color: #fff;
+    vertical-align: middle !important;
+}
+
+.main-table tr:first-child td {
+    background: #373737;
+    color: #fff;
+}
+
+.main-table .btn {
+    padding: 3px 7px;
+}
+
+.main-table .btn .fa {
+    padding-right: 3px;
+}
+
+/* End member manage  Page */

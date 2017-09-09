@@ -8,8 +8,7 @@
         $username = $_SESSION['username'];
         include "init.php";
 
-        echo "welcome " . $username . " In DashBoard" ;
-        print_r($_SESSION);
+        echo "Welcome To DashBoard";
 
         include $tpl . 'footer.php';
 
