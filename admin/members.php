@@ -25,6 +25,8 @@
 
         if($do == 'Manage') {
 
+            echo checkItem('Username', 'users', 'AbdoAllah');
+
                                                 /*============================
                                                  ######## Manage Page ########
                                                  ===========================*/
@@ -199,21 +201,29 @@
 
                 if(empty($form_error)) {
 
-                    // Insert Member In DataBase
-                    $stmt = $db_con -> prepare("INSERT INTO
+                    $count = checkItem('Username', 'users', $username);
+
+                    if($count == 1) {
+                        echo "Sorry, This User Is Exist In Database";
+                    } else {
+
+                        // Insert Member In DataBase
+                        $stmt = $db_con -> prepare("INSERT INTO
                                                       users(Username, password, Email, FullName )
                                                 VALUES(:zuser, :zpass, :zmail, :zname)");
-                    $stmt -> execute(array(
+                        $stmt -> execute(array(
 
-                        'zuser' => $username,
-                        'zpass' => $hash_password,
-                        'zmail' => $email,
-                        'zname' => $full_name,
-                    ));
+                            'zuser' => $username,
+                            'zpass' => $hash_password,
+                            'zmail' => $email,
+                            'zname' => $full_name,
+                        ));
 
-                    $count = $stmt -> rowCount();
+                        $count = $stmt -> rowCount();
 
-                    echo '<div class="alert alert-success">' . $count . " Record Has Been Updated" . '</div>';
+                        echo '<div class="alert alert-success">' . $count . " Record Has Been Updated" . '</div>';
+
+                    }
 
                 }
                 // Check if there's no error proseed the update operation

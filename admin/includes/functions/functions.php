@@ -1,6 +1,7 @@
 <?php
 
     /*
+     *** Get Title Function v1.0
      *** Title Function that echo page title in case page has variable $page_title
      *** And echo Default in other page
     */
@@ -19,7 +20,8 @@
     }
 
     /*
-     *** Home Redirect Function [ This Function Accept Parameter ]
+     *** Home Redirect Function v1.0
+     *** Redirect To Home Page [ This Function Accept Parameter ]
      *** $errorMsg = Echo The Error Message
      *** $second = Number of second before redirecting to Home
      */
@@ -31,4 +33,21 @@
         header("refresh:$second;url=index.php");
         exit();
 
+    }
+
+    /*
+     *** Check Item Function v1.0
+     *** Function To Check Items In Database [Function Accept Parameters]
+     *** $select = the item To select [Example: username, item, category]
+     *** $from = the table to select from [Example: Users]
+     *** $value = the value of select [Example: AboAllah]
+     */
+
+    function checkItem($select, $from, $value) {
+
+        global $db_con;
+        $stmt2 = $db_con -> prepare("SELECT $select FROM $from WHERE $select = ?");
+        $stmt2 -> execute(array($value));
+        $count = $stmt2 -> rowCount();
+        return $count;
     }
