@@ -13,6 +13,14 @@ body {
     right: 25px;
 }
 
+a{
+    color:#fff;
+}
+a:hover {
+    text-decoration:none;
+    color:#fff;
+}
+
 /* End General Rules*/
 
 /* Start Bootstrap Edit */
@@ -69,11 +77,60 @@ body {
 
 /* End Navbar */
 
+/* Start DashBoard Page */
+
+.home-stats .stat {
+    background-color:
+}
+
+/* Start DashBoard Page */
+
+.home-stats .stat {
+    padding: 25px;
+    font-size: 15px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.home-stats .stat span {
+    display: block;
+    font-size: 60px;
+    padding: 0;
+}
+
+.latest {
+    margin-top: 30px;
+}
+
+.home-stats .stat.st-members {
+    background-color: #2980b9;
+}
+
+.home-stats .stat.st-pending {
+    background-color: #c0392b;
+}
+
+.home-stats .stat.st-items {
+    background-color: #27ae60;
+}
+
+.home-stats .stat.st-comments {
+    background-color: #8e44ad   ;
+}
+
+.latest-users .btn {
+    padding: 0 10px;
+    margin-right: 5px;
+    float: right;
+}
+
 /* Start member manage page */
 
 .edit-page h1,
 .update-page h1,
-.manage-page h1{
+.manage-page h1,
+.home-stats h1,
+.pending-page h1 {
     font-size: 55px;
     font-weight: 600;
     margin: 0 0 40px;
@@ -105,10 +162,13 @@ body {
 
 .main-table .btn {
     padding: 3px 7px;
+    margin-left: 7px;
 }
 
 .main-table .btn .fa {
     padding-right: 3px;
 }
+
+
 
 /* End member manage  Page */
