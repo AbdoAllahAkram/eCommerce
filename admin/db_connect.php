@@ -1,8 +1,8 @@
 <?php
 
-    $dsn        = 'mysql:host=localhost;dbname=shop';
-    $db_user    = 'root';
-    $db_pass    = '';
+    $dsn        = 'mysql:host=us-cdbr-iron-east-05.cleardb.net;dbname=	heroku_946f161e637be6a';
+    $db_user    = 'b7d200d372c534';
+    $db_pass    = 'b4ee2afef849f30';
     $db_option  = array(
         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
     );
