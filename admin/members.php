@@ -6,6 +6,7 @@
      == you can Add | Edit | Delete Members From Here
      ==================================================
      */
+    ob_start();
 
     session_start();
 
@@ -24,7 +25,7 @@
         =================================*/
 
         if($do == 'Manage') {
-            
+
                                                 /*============================
                                                  ######## Manage Page ########
                                                  ===========================*/
@@ -215,6 +216,7 @@
 
                         redirectHome($theMsg, 'back');
                     } else {
+
 
                         // Insert Member In DataBase
                         $stmt = $db_con -> prepare("INSERT INTO
@@ -525,3 +527,4 @@
 
         header("Location: index.php");
     }
+    ob_end_flush();

@@ -5,6 +5,14 @@ body {
     font-family: 'Saira Semi Condensed', sans-serif;
 }
 
+h1 {
+    font-size: 55px;
+    font-weight: 600;
+    margin: 0 0 40px;
+    color: #5b5b5b;
+}
+
+
 .red-star {
     position: absolute;
     font-size: 30px;
@@ -79,9 +87,6 @@ a:hover {
 
 /* Start DashBoard Page */
 
-.home-stats .stat {
-    background-color:
-}
 
 /* Start DashBoard Page */
 
@@ -126,16 +131,6 @@ a:hover {
 
 /* Start member manage page */
 
-.edit-page h1,
-.update-page h1,
-.manage-page h1,
-.home-stats h1,
-.pending-page h1 {
-    font-size: 55px;
-    font-weight: 600;
-    margin: 0 0 40px;
-    color: #5b5b5b;
-}
 
 .show-pass {
     position: absolute;
@@ -170,5 +165,115 @@ a:hover {
 }
 
 
-
 /* End member manage  Page */
+
+/* Start Category Page */
+
+.categories .cat {
+    position: relative;
+    overflow: hidden;
+}
+
+.categories .panel-heading {
+    font-weight: bold;
+    color: #6d6d6d;
+}
+
+.categories .panel-heading option {
+    color: #000;
+}
+.categories .panel-heading .option a {
+    color: #7c7b7b;
+}
+
+.categories .panel-heading .option span {
+    cursor: pointer;
+}
+
+.categories .panel-heading .option .active {
+    color: #dd6426;
+    font-weight: bold;
+}
+
+
+.categories .panel-body {
+    padding: 10px 15px;
+}
+
+.categories .cat h3 {
+    font-weight: bold;
+    color: #5b5b5b;
+}
+
+.categories .cat p {
+    font-weight: bold;
+    color: #7c7b7b;
+}
+
+.categories .cat .hidden-button {
+    position: absolute;
+    /*top: 15px;*/
+    right: -190px;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+
+
+}
+
+.categories .cat:hover .hidden-button {
+    right: 0;
+}
+
+.categories .cat .hidden-button .btn {
+    margin-right: 5px;
+}
+
+.categories .cat .hidden-button .btn i {
+    margin-right: 4px;
+}
+
+.categories .cat h3 {
+    margin-top:0;
+    cursor: pointer;
+}
+
+
+
+.categories .cat .visibility,
+.categories .cat .commenting,
+.categories .cat .ads {
+    color: #fff;
+    padding: 0 8px;
+    border-radius: 7px;
+    margin-right: 6px;
+}
+
+.categories .cat .visibility {
+    background: #c0392b;
+}
+
+.categories .cat .commenting {
+    background: #2c3e50;
+}
+
+.categories .cat .ads {
+    background: #7f8c8d;
+}
+
+.categories .cat hr {
+    margin-top: 10px;
+    margin-bottom: 10px;            
+}
+
+.categories .cat:last-of-type  hr {
+    display: none;
+}
+
+.categories .add-btn {
+    float: right;
+}
+
+
+/* End Category Page */

@@ -100,3 +100,19 @@
         $rows = $getStmt -> fetchAll();
         return $rows;
     }
+
+    /*
+     *** Get Info of Items function v1.0
+     *** $select = the item To select
+     *** $table = table To chose from
+     *** $where = select column [example: ID]
+     *** $value = the value of select
+     */
+
+    function getInfo($select, $table, $where, $value) {
+        global $db_con;
+        $getStmt = $db_con -> prepare("SELECT $select FROM $table WHERE $where = ?");
+        $getStmt -> execute(array($value));
+        $rows = $getStmt -> fetch();
+        return $rows;
+    }
