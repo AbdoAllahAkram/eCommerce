@@ -1,6 +1,11 @@
 $(function() {
    'use strict';
 
+   // Trigger The SelectBox
+    $("select").selectBoxIt({
+        autoWidth: false
+    });
+
    // Add Red Star To Required Failed
     $('input').each(function() {
 
